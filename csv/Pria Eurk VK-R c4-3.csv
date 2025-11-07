@@ -1,0 +1,4 @@
+bodyId,bodyName,type,subType,isLandable,radius,materials,rings,gravity,terraformable,updateTime,discoveredBy,discoveredDt,EDSM
+2,"Pria Eurk VK-R c4-3 A",Star,"K (Yellow-Orange) Star",0,0,,,0,0,"2020-01-14 18:06:16",Algopilli,"2020-01-14 18:06:16",https://www.edsm.net/en/system/bodies/id/47644328/name/Pria+Eurk+VK-R+c4-3
+3,"Pria Eurk VK-R c4-3 B",Star,"M (Red dwarf) Star",0,0,,,0,0,"2020-01-14 18:06:18",Algopilli,"2020-01-14 18:06:18",https://www.edsm.net/en/system/bodies/id/47644328/name/Pria+Eurk+VK-R+c4-3
+4,"Pria Eurk VK-R c4-3 C",Star,"L (Brown dwarf) Star",0,0,,,0,0,"2020-01-14 18:06:18",Algopilli,"2020-01-14 18:06:18",https://www.edsm.net/en/system/bodies/id/47644328/name/Pria+Eurk+VK-R+c4-3

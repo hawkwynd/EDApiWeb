@@ -1,0 +1,5 @@
+bodyId,bodyName,type,subType,isLandable,radius,materials,rings,gravity,terraformable,updateTime,discoveredBy,discoveredDt,EDSM
+2,"Flyooe Eoq NL-G b58-0 A",Star,"M (Red dwarf) Star",0,0,,,0,0,"2022-02-06 11:19:04","Takeshii Kovaks","2022-02-06 11:19:04",https://www.edsm.net/en/system/bodies/id/72261860/name/Flyooe+Eoq+NL-G+b58-0
+5,"Flyooe Eoq NL-G b58-0 AB 1",Planet,"High metal content world",1,7650.16,"Iron:21.75,Nickel:16.45,Sulphur:15.61,Carbon:13.13,Chromium:9.78,Phosphorus:8.41,Zinc:5.91,Germanium:4.51,Cadmium:1.69,Tin:1.4,Ruthenium:1.34",,1.51,No,"2022-02-06 11:19:49","Takeshii Kovaks","2022-02-06 11:19:49",https://www.edsm.net/en/system/bodies/id/72261860/name/Flyooe+Eoq+NL-G+b58-0
+3,"Flyooe Eoq NL-G b58-0 B",Star,"M (Red dwarf) Star",0,0,,,0,0,"2022-02-06 11:19:06","Takeshii Kovaks","2022-02-06 11:19:06",https://www.edsm.net/en/system/bodies/id/72261860/name/Flyooe+Eoq+NL-G+b58-0
+4,"Flyooe Eoq NL-G b58-0 C",Star,"M (Red dwarf) Star",0,0,,,0,0,"2022-02-06 11:19:06","Takeshii Kovaks","2022-02-06 11:19:06",https://www.edsm.net/en/system/bodies/id/72261860/name/Flyooe+Eoq+NL-G+b58-0

@@ -1,0 +1,4 @@
+body,bodyName,Type,subType,maxValue,isLandable,radius,materials,rings,gravity,terraformable,discoveredBy,discoveredDt,EDSM
+0,"Drokoe EX-R d5-1",Star,"T Tauri Star",,0,0,,,0,0,"Saint Valentine","2024-05-10 00:49:31",https://www.edsm.net/en/system/bodies/id/34307745/name/Drokoe+EX-R+d5-1
+5,"Drokoe EX-R d5-1 1",Planet,"Gas giant with ammonia-based life",,,57248.26,,,1.02,No,"Saint Valentine","2024-05-10 00:50:13","https://www.edsm.net/en/system/bodies/id/34307745/name/Drokoe+EX-R+d5-1/details/idB/488672519/nameB/Drokoe EX-R d5-1 1 5"
+6,"Drokoe EX-R d5-1 2",Planet,"Icy body",,,13079.59,,,1.47,No,"Saint Valentine","2024-05-10 00:50:08","https://www.edsm.net/en/system/bodies/id/34307745/name/Drokoe+EX-R+d5-1/details/idB/488672518/nameB/Drokoe EX-R d5-1 2 6"

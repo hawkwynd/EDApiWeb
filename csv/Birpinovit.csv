@@ -1,0 +1,21 @@
+bodyId,bodyName,type,subType,isLandable,radius,materials,rings,gravity,terraformable,updateTime,discoveredBy,discoveredDt,EDSM
+1,"Birpinovit A",Star,"K (Yellow-Orange) Star",0,0,,,0,0,"2024-07-28 22:29:34","Genaro Deige","2017-03-01 20:31:08",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+4,"Birpinovit A 1",Planet,"High metal content world",,5046.48,,,0.86,No,"2021-01-09 10:43:31","Thomas McFly","2017-02-11 10:43:08",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+5,"Birpinovit A 2",Planet,"Water world",,4986.78,,,0.85,No,"2024-07-28 14:48:49","Thomas McFly","2017-02-11 10:43:28",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+6,"Birpinovit A 3",Planet,"High metal content world",,5734.24,,,1.02,No,"2024-07-28 14:50:21","Genaro Deige","2017-03-01 20:45:03",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+7,"Birpinovit A 4",Planet,"Icy body",,8049.04,,,0.84,No,"2024-07-28 14:50:12","Genaro Deige","2017-03-01 20:45:55",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+8,"Birpinovit A 4 a",Planet,"Icy body",1,3884.09,"Sulphur:25.25,Carbon:21.23,Phosphorus:13.59,Iron:12.84,Nickel:9.71,Chromium:5.77,Manganese:5.3,Selenium:3.95,Niobium:0.88,Yttrium:0.77,Tungsten:0.71",,0.26,No,"2024-07-28 14:50:16","Genaro Deige","2017-03-01 20:46:26",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+9,"Birpinovit A 5",Planet,"Icy body",,5839.16,,,0.54,No,"2024-07-28 14:49:12","Genaro Deige","2017-03-01 20:48:21",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+10,"Birpinovit A 6",Planet,"Icy body",,11238.02,,,1.14,No,"2024-07-28 14:49:15","Genaro Deige","2017-03-01 20:53:28",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+11,"Birpinovit A 7",Planet,"Icy body",,9721.54,,,0.91,No,"2024-07-28 14:50:56","Genaro Deige","2017-03-01 21:03:47",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+12,"Birpinovit A 8",Planet,"Icy body",,9146.85,,,0.84,No,"2024-07-28 14:49:00","Genaro Deige","2017-03-01 20:55:21",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+2,"Birpinovit B",Star,"M (Red dwarf) Star",0,0,,,0,0,"2024-07-28 14:48:43","Genaro Deige","2017-03-01 21:10:44",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+14,"Birpinovit B 1",Planet,"Icy body",,8150.68,,,0.8,No,"2024-07-28 14:49:54","Genaro Deige","2017-03-01 21:16:18",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+15,"Birpinovit B 2",Planet,"Rocky Ice world",,6600.93,,,0.68,No,"2024-07-28 14:49:51","Genaro Deige","2017-03-01 21:16:34",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+17,"Birpinovit B 3",Planet,"Icy body",,8393.36,,,0.75,No,"2024-07-28 14:49:59","Genaro Deige","2017-03-01 21:19:09",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+18,"Birpinovit B 4",Planet,"Icy body",1,6515.48,"Sulphur:24.16,Carbon:20.32,Iron:15.92,Phosphorus:13.01,Nickel:12.04,Zinc:4.33,Vanadium:3.91,Selenium:3.78,Yttrium:0.95,Tungsten:0.87,Mercury:0.7",,0.51,No,"2024-07-28 14:50:02","Genaro Deige","2017-03-01 21:19:28",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+19,"Birpinovit B 5",Planet,"Icy body",,7908.96,,,0.69,No,"2024-07-28 14:49:20","Genaro Deige","2017-03-01 21:21:49",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+20,"Birpinovit B 6",Planet,"Icy body",,8955.91,,,0.82,No,"2024-07-28 14:49:34","Genaro Deige","2017-03-01 21:13:29",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+21,"Birpinovit B 6 a",Planet,"Icy body",1,3672.95,"Sulphur:27.21,Carbon:22.88,Phosphorus:14.65,Iron:11.88,Nickel:8.99,Manganese:4.91,Selenium:4.26,Vanadium:2.92,Cadmium:0.92,Tin:0.73,Antimony:0.66",,0.23,No,"2024-07-28 14:49:38","Genaro Deige","2017-03-01 21:13:50",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+22,"Birpinovit B 7",Planet,"Icy body",,9537.94,,,0.89,No,"2024-07-28 14:49:23","Genaro Deige","2017-03-01 21:25:24",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit
+23,"Birpinovit B 7 a",Planet,"Icy body",1,2584.89,"Sulphur:27.94,Carbon:23.49,Phosphorus:15.04,Iron:12.2,Nickel:9.22,Manganese:5.04,Zinc:3.31,Arsenic:1.43,Niobium:0.83,Tellurium:0.83,Tungsten:0.67",,0.15,No,"2024-07-28 14:49:26","Genaro Deige","2017-03-01 21:25:59",https://www.edsm.net/en/system/bodies/id/16823/name/Birpinovit

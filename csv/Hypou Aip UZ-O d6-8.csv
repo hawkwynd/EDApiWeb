@@ -1,0 +1,13 @@
+bodyId,bodyName,type,subType,isLandable,radius,materials,rings,gravity,terraformable,updateTime,discoveredBy,discoveredDt,EDSM
+4,"Hypou Aip UZ-O d6-8 A",Star,"F (White) Star",0,0,,,0,0,"2021-03-10 18:41:00","Oxalis Acetosella","2021-03-10 18:41:00",https://www.edsm.net/en/system/bodies/id/63411847/name/Hypou+Aip+UZ-O+d6-8
+5,"Hypou Aip UZ-O d6-8 B",Star,"M (Red dwarf) Star",0,0,,,0,0,"2021-03-10 18:40:59","Oxalis Acetosella","2021-03-10 18:40:59",https://www.edsm.net/en/system/bodies/id/63411847/name/Hypou+Aip+UZ-O+d6-8
+6,"Hypou Aip UZ-O d6-8 C",Star,"K (Yellow-Orange) Star",0,0,,,0,0,"2021-03-10 18:41:01","Oxalis Acetosella","2021-03-10 18:41:01",https://www.edsm.net/en/system/bodies/id/63411847/name/Hypou+Aip+UZ-O+d6-8
+7,"Hypou Aip UZ-O d6-8 D",Star,"G (White-Yellow) Star",0,0,,,0,0,"2021-03-10 18:41:01","Oxalis Acetosella","2021-03-10 18:41:01",https://www.edsm.net/en/system/bodies/id/63411847/name/Hypou+Aip+UZ-O+d6-8
+8,"Hypou Aip UZ-O d6-8 E",Star,"M (Red dwarf) Star",0,0,,,0,0,"2021-03-10 18:41:01","Oxalis Acetosella","2021-03-10 18:41:01",https://www.edsm.net/en/system/bodies/id/63411847/name/Hypou+Aip+UZ-O+d6-8
+9,"Hypou Aip UZ-O d6-8 E 1",Planet,"High metal content world",,4611.99,,,0.73,No,"2021-03-10 18:41:56","Oxalis Acetosella","2021-03-10 18:41:56",https://www.edsm.net/en/system/bodies/id/63411847/name/Hypou+Aip+UZ-O+d6-8
+10,"Hypou Aip UZ-O d6-8 E 2",Planet,"Icy body",,4585.73,,,0.35,No,"2021-03-10 18:41:47","Oxalis Acetosella","2021-03-10 18:41:47",https://www.edsm.net/en/system/bodies/id/63411847/name/Hypou+Aip+UZ-O+d6-8
+11,"Hypou Aip UZ-O d6-8 E 3",Planet,"Icy body",,5222.70,,,0.41,No,"2021-03-10 18:41:39","Oxalis Acetosella","2021-03-10 18:41:39",https://www.edsm.net/en/system/bodies/id/63411847/name/Hypou+Aip+UZ-O+d6-8
+12,"Hypou Aip UZ-O d6-8 E 3 a",Planet,"Icy body",,1855.36,,,0.11,No,"2021-03-10 18:41:42","Oxalis Acetosella","2021-03-10 18:41:42",https://www.edsm.net/en/system/bodies/id/63411847/name/Hypou+Aip+UZ-O+d6-8
+13,"Hypou Aip UZ-O d6-8 E 4",Planet,"Icy body",,5210.06,,,0.41,No,"2021-03-10 18:42:01","Oxalis Acetosella","2021-03-10 18:42:01",https://www.edsm.net/en/system/bodies/id/63411847/name/Hypou+Aip+UZ-O+d6-8
+14,"Hypou Aip UZ-O d6-8 E 5",Planet,"Icy body",,4901.86,,,0.38,No,"2021-03-10 18:42:03","Oxalis Acetosella","2021-03-10 18:42:03",https://www.edsm.net/en/system/bodies/id/63411847/name/Hypou+Aip+UZ-O+d6-8
+15,"Hypou Aip UZ-O d6-8 E 6",Planet,"Icy body",,6987.74,,,0.58,No,"2021-03-10 18:41:31","Oxalis Acetosella","2021-03-10 18:41:31",https://www.edsm.net/en/system/bodies/id/63411847/name/Hypou+Aip+UZ-O+d6-8

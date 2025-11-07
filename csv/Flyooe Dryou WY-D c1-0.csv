@@ -1,0 +1,4 @@
+body,bodyName,Type,subType,maxValue,isLandable,radius,materials,rings,gravity,terraformable,discoveredBy,discoveredDt,EDSM
+0,"Flyooe Dryou WY-D c1-0",Star,"K (Yellow-Orange) Star",,0,0,,,0,0,Myriel,"2017-12-10 09:57:03",https://www.edsm.net/en/system/bodies/id/19260224/name/Flyooe+Dryou+WY-D+c1-0
+1,"Flyooe Dryou WY-D c1-0 1",Planet,"High metal content world",,,6517.59,,,1.22,,Myriel,"2017-12-10 09:56:29","https://www.edsm.net/en/system/bodies/id/19260224/name/Flyooe+Dryou+WY-D+c1-0/details/idB/11059525/nameB/Flyooe Dryou WY-D c1-0 1 1"
+0,"Flyooe Dryou WY-D c1-0 1 a",Planet,"Rocky body",,,2140.75,,,0.27,,Myriel,"2017-12-10 09:56:07",https://www.edsm.net/en/system/bodies/id/19260224/name/Flyooe+Dryou+WY-D+c1-0

@@ -1,0 +1,4 @@
+body,bodyName,Type,subType,maxValue,isLandable,radius,materials,rings,gravity,terraformable,discoveredBy,discoveredDt,EDSM
+1,"M6 Sector VJ-Z b3 A",Star,"M (Red dwarf) Star",,0,0,,,0,0,RazorJK,"2020-06-27 07:33:40","https://www.edsm.net/en/system/bodies/id/50497675/name/M6+Sector+VJ-Z+b3/details/idB/190579245/nameB/M6 Sector VJ-Z b3 A 1"
+3,"M6 Sector VJ-Z b3 B",Star,"M (Red dwarf) Star",,0,0,,,0,0,RazorJK,"2020-06-27 07:33:40","https://www.edsm.net/en/system/bodies/id/50497675/name/M6+Sector+VJ-Z+b3/details/idB/203834754/nameB/M6 Sector VJ-Z b3 B 3"
+4,"M6 Sector VJ-Z b3 C",Star,"T (Brown dwarf) Star",,0,0,,,0,0,RazorJK,"2020-06-27 07:33:40","https://www.edsm.net/en/system/bodies/id/50497675/name/M6+Sector+VJ-Z+b3/details/idB/203834753/nameB/M6 Sector VJ-Z b3 C 4"

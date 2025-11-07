@@ -1,0 +1,3 @@
+bodyId,bodyName,type,subType,isLandable,radius,materials,rings,gravity,terraformable,updateTime,discoveredBy,discoveredDt,EDSM
+0,"Eafoff DV-G d10-25",Star,"F (White) Star",0,0,,,0,0,"2024-07-29 00:33:24","CMDR Scott Fleming","2024-07-29 00:33:24",https://www.edsm.net/en/system/bodies/id/86167109/name/Eafoff+DV-G+d10-25
+9,"Eafoff DV-G d10-25 7 a",Planet,"Icy body",,4228.97,,,0.27,No,"2024-07-29 00:34:08","CMDR Scott Fleming","2024-07-29 00:34:08",https://www.edsm.net/en/system/bodies/id/86167109/name/Eafoff+DV-G+d10-25

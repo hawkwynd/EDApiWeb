@@ -1,0 +1,9 @@
+bodyId,bodyName,type,subType,isLandable,radius,materials,rings,gravity,terraformable,updateTime,discoveredBy,discoveredDt,EDSM
+0,"Eafoff DB-O e6-1",Star,"Neutron Star",0,0,,,0,0,"2020-07-12 11:33:12",guson,"2020-07-12 11:33:12",https://www.edsm.net/en/system/bodies/id/54451422/name/Eafoff+DB-O+e6-1
+1,"Eafoff DB-O e6-1 1",Planet,"High metal content world",,6569.07,,,1.23,No,"2021-04-18 19:25:20",guson,"2020-07-12 11:34:54",https://www.edsm.net/en/system/bodies/id/54451422/name/Eafoff+DB-O+e6-1
+2,"Eafoff DB-O e6-1 2",Planet,"High metal content world",,7067.35,,,1.36,No,"2021-04-18 19:25:06",guson,"2020-07-12 11:34:49",https://www.edsm.net/en/system/bodies/id/54451422/name/Eafoff+DB-O+e6-1
+3,"Eafoff DB-O e6-1 3",Planet,"High metal content world",,8653.85,,,1.86,No,"2021-04-18 19:25:01",guson,"2020-07-12 11:34:28",https://www.edsm.net/en/system/bodies/id/54451422/name/Eafoff+DB-O+e6-1
+4,"Eafoff DB-O e6-1 3 a",Planet,"Rocky body",1,2525.84,"Iron:19.32,Sulphur:17.06,Nickel:14.61,Carbon:14.35,Phosphorus:9.19,Chromium:8.69,Manganese:7.98,Vanadium:4.74,Cadmium:1.5,Tellurium:1.31,Molybdenum:1.26",,0.33,No,"2021-04-18 19:24:58",guson,"2020-07-12 11:34:31",https://www.edsm.net/en/system/bodies/id/54451422/name/Eafoff+DB-O+e6-1
+5,"Eafoff DB-O e6-1 4",Planet,"High metal content world",,7506.69,,,1.49,No,"2021-04-18 19:24:52",guson,"2020-07-12 11:34:22",https://www.edsm.net/en/system/bodies/id/54451422/name/Eafoff+DB-O+e6-1
+7,"Eafoff DB-O e6-1 5",Planet,"High metal content world",,7726.14,,,1.55,No,"2021-04-18 19:25:15",guson,"2020-07-12 11:34:41",https://www.edsm.net/en/system/bodies/id/54451422/name/Eafoff+DB-O+e6-1
+8,"Eafoff DB-O e6-1 6",Planet,"High metal content world",,7258.39,,,1.42,No,"2021-04-18 19:25:12",guson,"2020-07-12 11:34:45",https://www.edsm.net/en/system/bodies/id/54451422/name/Eafoff+DB-O+e6-1

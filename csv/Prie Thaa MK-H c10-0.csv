@@ -1,0 +1,9 @@
+name,discoveredBy,discoveredDate,distanceToArrival,type,subType,isLandable,gravity,terraformable
+"Prie Thaa MK-H c10-0",,,0,Star,"K (Yellow-Orange) Star",0,0,0
+"Prie Thaa MK-H c10-0 1","CMDR Scott Fleming","2024-05-29 02:51:36",600,Planet,"High metal content world",,0.97,"Not terraformable"
+"Prie Thaa MK-H c10-0 2","CMDR Scott Fleming","2024-05-29 02:51:45",758,Planet,"Rocky Ice world",,0.57,"Not terraformable"
+"Prie Thaa MK-H c10-0 2 a","CMDR Scott Fleming","2024-05-29 02:51:56",758,Planet,"Rocky Ice world",1,0.15,"Not terraformable"
+"Prie Thaa MK-H c10-0 3","CMDR Scott Fleming","2024-05-29 02:51:18",1012,Planet,"Icy body",,0.49,"Not terraformable"
+"Prie Thaa MK-H c10-0 4","CMDR Scott Fleming","2024-05-29 02:51:11",1429,Planet,"Icy body",,0.63,"Not terraformable"
+"Prie Thaa MK-H c10-0 5","CMDR Scott Fleming","2024-05-29 02:51:21",1827,Planet,"Icy body",,0.57,"Not terraformable"
+"Prie Thaa MK-H c10-0 6","CMDR Scott Fleming","2024-05-29 02:51:28",2459,Planet,"Icy body",,0.6,"Not terraformable"

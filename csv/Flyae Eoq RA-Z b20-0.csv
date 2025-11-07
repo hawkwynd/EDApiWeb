@@ -1,0 +1,3 @@
+bodyId,bodyName,type,subType,isLandable,radius,materials,rings,gravity,terraformable,updateTime,discoveredBy,discoveredDt,EDSM
+1,"Flyae Eoq RA-Z b20-0 A",Star,"M (Red dwarf) Star",0,0,,,0,0,"2020-09-15 15:44:54",muckio,"2020-09-15 15:44:54",https://www.edsm.net/en/system/bodies/id/56799391/name/Flyae+Eoq+RA-Z+b20-0
+2,"Flyae Eoq RA-Z b20-0 B",Star,"T (Brown dwarf) Star",0,0,,,0,0,"2020-09-15 15:44:58",muckio,"2020-09-15 15:44:58",https://www.edsm.net/en/system/bodies/id/56799391/name/Flyae+Eoq+RA-Z+b20-0

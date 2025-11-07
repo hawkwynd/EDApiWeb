@@ -1,0 +1,11 @@
+bodyId,bodyName,type,subType,isLandable,radius,materials,rings,gravity,terraformable,updateTime,discoveredBy,discoveredDt,EDSM
+0,"Hegai QU-G d10-3",Star,"G (White-Yellow) Star",0,0,,,0,0,"2020-05-12 17:55:28",Lazulit,"2020-05-12 17:55:28",https://www.edsm.net/en/system/bodies/id/60119460/name/Hegai+QU-G+d10-3
+1,"Hegai QU-G d10-3 1",Planet,"High metal content world",,4833.00,,,0.82,No,"2020-05-12 17:56:42",Lazulit,"2020-05-12 17:56:42",https://www.edsm.net/en/system/bodies/id/60119460/name/Hegai+QU-G+d10-3
+2,"Hegai QU-G d10-3 2",Planet,"High metal content world",,2893.02,,,0.44,No,"2020-05-12 17:56:39",Lazulit,"2020-05-12 17:56:39",https://www.edsm.net/en/system/bodies/id/60119460/name/Hegai+QU-G+d10-3
+3,"Hegai QU-G d10-3 3",Planet,"High metal content world",,3244.74,,,0.51,No,"2020-05-12 17:56:37",Lazulit,"2020-05-12 17:56:37",https://www.edsm.net/en/system/bodies/id/60119460/name/Hegai+QU-G+d10-3
+4,"Hegai QU-G d10-3 4",Planet,"Rocky Ice world",,4050.50,,,0.39,No,"2020-05-12 17:55:50",Lazulit,"2020-05-12 17:55:50",https://www.edsm.net/en/system/bodies/id/60119460/name/Hegai+QU-G+d10-3
+7,"Hegai QU-G d10-3 5",Planet,"Rocky Ice world",,4314.13,,,0.42,No,"2020-05-12 17:56:04",Lazulit,"2020-05-12 17:56:04",https://www.edsm.net/en/system/bodies/id/60119460/name/Hegai+QU-G+d10-3
+8,"Hegai QU-G d10-3 6",Planet,"Rocky Ice world",,4207.39,,,0.4,No,"2020-05-12 17:56:06",Lazulit,"2020-05-12 17:56:06",https://www.edsm.net/en/system/bodies/id/60119460/name/Hegai+QU-G+d10-3
+9,"Hegai QU-G d10-3 7",Planet,"Icy body",,5230.38,,,0.41,No,"2020-05-12 17:56:29",Lazulit,"2020-05-12 17:56:29",https://www.edsm.net/en/system/bodies/id/60119460/name/Hegai+QU-G+d10-3
+10,"Hegai QU-G d10-3 8",Planet,"Icy body",,6939.51,,,0.59,No,"2020-05-12 17:56:21",Lazulit,"2020-05-12 17:56:21",https://www.edsm.net/en/system/bodies/id/60119460/name/Hegai+QU-G+d10-3
+11,"Hegai QU-G d10-3 8 a",Planet,"Icy body",1,2448.05,"Sulphur:27.34,Carbon:22.99,Phosphorus:14.72,Iron:12.08,Nickel:9.13,Manganese:4.99,Zinc:3.28,Germanium:3.18,Niobium:0.83,Tin:0.74,Yttrium:0.72",,0.15,No,"2020-05-12 17:56:17",Lazulit,"2020-05-12 17:56:17",https://www.edsm.net/en/system/bodies/id/60119460/name/Hegai+QU-G+d10-3

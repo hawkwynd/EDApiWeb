@@ -1,0 +1,7 @@
+bodyId,bodyName,type,subType,isLandable,radius,materials,rings,gravity,terraformable,updateTime,discoveredBy,discoveredDt,EDSM
+1,"Hypou Aip HB-D b55-0 A",Star,"M (Red dwarf) Star",0,0,,,0,0,"2023-03-04 09:36:53",Loveflight,"2020-01-29 21:38:32",https://www.edsm.net/en/system/bodies/id/70669881/name/Hypou+Aip+HB-D+b55-0
+3,"Hypou Aip HB-D b55-0 A 1",Planet,"Rocky Ice world",,7768.38,,,0.86,No,"2020-01-29 21:39:21",Loveflight,"2020-01-29 21:39:21",https://www.edsm.net/en/system/bodies/id/70669881/name/Hypou+Aip+HB-D+b55-0
+4,"Hypou Aip HB-D b55-0 A 2",Planet,"Rocky Ice world",,7279.63,,,0.79,No,"2020-01-29 21:39:15",Loveflight,"2020-01-29 21:39:15",https://www.edsm.net/en/system/bodies/id/70669881/name/Hypou+Aip+HB-D+b55-0
+13,"Hypou Aip HB-D b55-0 A 9",Planet,"Icy body",,7267.54,,,0.61,No,"2020-01-29 21:39:07",Loveflight,"2020-01-29 21:39:07",https://www.edsm.net/en/system/bodies/id/70669881/name/Hypou+Aip+HB-D+b55-0
+14,"Hypou Aip HB-D b55-0 A 10",Planet,"Icy body",,8452.62,,,0.75,No,"2020-01-29 21:38:48",Loveflight,"2020-01-29 21:38:48",https://www.edsm.net/en/system/bodies/id/70669881/name/Hypou+Aip+HB-D+b55-0
+2,"Hypou Aip HB-D b55-0 B",Star,"L (Brown dwarf) Star",0,0,,,0,0,"2020-01-29 21:38:38",Loveflight,"2020-01-29 21:38:38",https://www.edsm.net/en/system/bodies/id/70669881/name/Hypou+Aip+HB-D+b55-0

@@ -1,0 +1,4 @@
+body,bodyName,Type,subType,maxValue,isLandable,radius,materials,rings,gravity,terraformable,discoveredBy,discoveredDt,EDSM
+1,"Gludgai XO-F b0 A",Star,"M (Red dwarf) Star",,0,0,,,0,0,"Jolly Roger [360th]","2023-10-30 11:43:18","https://www.edsm.net/en/system/bodies/id/82540007/name/Gludgai+XO-F+b0/details/idB/464078443/nameB/Gludgai XO-F b0 A 1"
+2,"Gludgai XO-F b0 B",Star,"L (Brown dwarf) Star",,0,0,,,0,0,"Jolly Roger [360th]","2023-10-30 11:43:20","https://www.edsm.net/en/system/bodies/id/82540007/name/Gludgai+XO-F+b0/details/idB/464078444/nameB/Gludgai XO-F b0 B 2"
+3,"Gludgai XO-F b0 B 1",Planet,"Class I gas giant",,,"69,398",,,3.59,No,"Jolly Roger [360th]","2023-10-30 11:44:04","https://www.edsm.net/en/system/bodies/id/82540007/name/Gludgai+XO-F+b0/details/idB/464078474/nameB/Gludgai XO-F b0 B 1 3"

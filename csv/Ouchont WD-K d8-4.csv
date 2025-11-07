@@ -1,0 +1,5 @@
+bodyId,bodyName,type,subType,isLandable,radius,materials,rings,gravity,terraformable,updateTime,discoveredBy,discoveredDt,EDSM
+2,"Ouchont WD-K d8-4 A",Star,"G (White-Yellow) Star",0,0,,,0,0,"2019-08-19 19:09:05",SAILOR,"2019-08-19 19:09:05",https://www.edsm.net/en/system/bodies/id/43135183/name/Ouchont+WD-K+d8-4
+4,"Ouchont WD-K d8-4 B",Star,"K (Yellow-Orange) Star",0,0,,,0,0,"2019-08-19 19:09:05",SAILOR,"2019-08-19 19:09:05",https://www.edsm.net/en/system/bodies/id/43135183/name/Ouchont+WD-K+d8-4
+5,"Ouchont WD-K d8-4 C",Star,"L (Brown dwarf) Star",0,0,,,0,0,"2019-08-19 19:09:05",SAILOR,"2019-08-19 19:09:05",https://www.edsm.net/en/system/bodies/id/43135183/name/Ouchont+WD-K+d8-4
+6,"Ouchont WD-K d8-4 D",Star,"K (Yellow-Orange) Star",0,0,,,0,0,"2019-08-19 19:09:05",SAILOR,"2019-08-19 19:09:05",https://www.edsm.net/en/system/bodies/id/43135183/name/Ouchont+WD-K+d8-4

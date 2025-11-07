@@ -1,0 +1,9 @@
+bodyId,bodyName,type,subType,isLandable,radius,materials,rings,gravity,terraformable,updateTime,discoveredBy,discoveredDt,EDSM
+1,"Varlawoth A",Star,"M (Red dwarf) Star",0,0,,,0,0,"2024-07-31 06:05:09","John Guevara","2016-11-19 01:27:26",https://www.edsm.net/en/system/bodies/id/8678/name/Varlawoth
+9,"Varlawoth A 1",Planet,"High metal content world",1,2772.37,"Iron:20.98,Nickel:15.87,Sulphur:14.98,Carbon:12.6,Chromium:9.44,Manganese:8.67,Phosphorus:8.07,Vanadium:5.15,Cadmium:1.63,Tin:1.36,Yttrium:1.25",,0.42,No,"2024-07-31 06:06:03","John Guevara","2016-11-19 01:29:04",https://www.edsm.net/en/system/bodies/id/8678/name/Varlawoth
+11,"Varlawoth A 2",Planet,"Icy body",,6243.89,,,0.56,No,"2020-12-17 20:04:26",halfbax328,"2017-05-13 13:50:15",https://www.edsm.net/en/system/bodies/id/8678/name/Varlawoth
+12,"Varlawoth A 3",Planet,"Icy body",,4390.39,,,0.33,No,"2024-07-29 22:51:34",halfbax328,"2017-05-13 13:50:17",https://www.edsm.net/en/system/bodies/id/8678/name/Varlawoth
+13,"Varlawoth A 4",Planet,"Water world",,4846.69,,,0.37,No,"2024-07-29 22:51:34",halfbax328,"2017-05-13 13:50:14",https://www.edsm.net/en/system/bodies/id/8678/name/Varlawoth
+14,"Varlawoth A 5",Planet,"Icy body",,5437.10,,,0.43,No,"2024-07-29 22:51:34",halfbax328,"2017-05-13 13:50:17",https://www.edsm.net/en/system/bodies/id/8678/name/Varlawoth
+15,"Varlawoth A 6",Planet,"Icy body",,5687.58,,,0.45,No,"2024-07-29 22:51:34",halfbax328,"2017-05-13 13:50:18",https://www.edsm.net/en/system/bodies/id/8678/name/Varlawoth
+2,"Varlawoth B",Star,"L (Brown dwarf) Star",0,0,,,0,0,"2024-07-31 06:05:23",Scaleios,"2019-01-08 15:54:59",https://www.edsm.net/en/system/bodies/id/8678/name/Varlawoth

@@ -1,0 +1,7 @@
+bodyId,bodyName,type,subType,isLandable,radius,materials,rings,gravity,terraformable,updateTime,discoveredBy,discoveredDt,EDSM
+2,"Pria Thaa OA-H b51-0 A",Star,"M (Red dwarf) Star",0,0,,,0,0,"2023-03-08 15:38:34","Marshall Westing","2019-10-16 17:06:49",https://www.edsm.net/en/system/bodies/id/44964560/name/Pria+Thaa+OA-H+b51-0
+3,"Pria Thaa OA-H b51-0 B",Star,"L (Brown dwarf) Star",0,0,,,0,0,"2023-03-08 15:38:37","Marshall Westing","2019-10-16 17:06:55",https://www.edsm.net/en/system/bodies/id/44964560/name/Pria+Thaa+OA-H+b51-0
+5,"Pria Thaa OA-H b51-0 C",Star,"M (Red dwarf) Star",0,0,,,0,0,"2023-03-08 15:38:37","Marshall Westing","2019-10-16 17:06:55",https://www.edsm.net/en/system/bodies/id/44964560/name/Pria+Thaa+OA-H+b51-0
+8,"Pria Thaa OA-H b51-0 CD 1",Planet,"Gas giant with water-based life",,71568.70,,,5.49,No,"2023-03-08 15:39:04",uchideshi,"2023-03-08 15:39:04",https://www.edsm.net/en/system/bodies/id/44964560/name/Pria+Thaa+OA-H+b51-0
+6,"Pria Thaa OA-H b51-0 D",Star,"T (Brown dwarf) Star",0,0,,,0,0,"2023-03-08 15:38:37","Marshall Westing","2019-10-16 17:06:55",https://www.edsm.net/en/system/bodies/id/44964560/name/Pria+Thaa+OA-H+b51-0
+7,"Pria Thaa OA-H b51-0 D 1",Planet,"High metal content world",,10253.01,,,2.54,No,"2023-03-08 15:39:10",uchideshi,"2023-03-08 15:39:10",https://www.edsm.net/en/system/bodies/id/44964560/name/Pria+Thaa+OA-H+b51-0

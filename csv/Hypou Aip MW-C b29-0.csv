@@ -1,0 +1,3 @@
+bodyId,bodyName,type,subType,isLandable,radius,materials,rings,gravity,terraformable,updateTime,discoveredBy,discoveredDt,EDSM
+1,"Hypou Aip MW-C b29-0 A",Star,"M (Red dwarf) Star",0,0,,,0,0,"2024-05-31 10:57:50","CMDR Scott Fleming","2024-05-31 10:57:50",https://www.edsm.net/en/system/bodies/id/85471263/name/Hypou+Aip+MW-C+b29-0
+2,"Hypou Aip MW-C b29-0 B",Star,"L (Brown dwarf) Star",0,0,,,0,0,"2024-05-31 10:57:52","CMDR Scott Fleming","2024-05-31 10:57:52",https://www.edsm.net/en/system/bodies/id/85471263/name/Hypou+Aip+MW-C+b29-0

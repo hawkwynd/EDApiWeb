@@ -1,0 +1,11 @@
+name,discoveredBy,discoveredDate,distance,type,subType,rings,isLandable,gravity,terraformable,EDSMLink
+"Heguae KX-G b12-0 A",Sanyarin,"2023-09-17 11:02:41",0,Star,"M (Red dwarf) Star",,0,0,0,https://www.edsm.net/en/system/bodies/id/82004983/name/Heguae+KX-G+b12-0
+"Heguae KX-G b12-0 A 1",Sanyarin,"2023-09-17 11:03:24",168,Planet,"Rocky Ice world",,1,0.21,"Not terraformable",https://www.edsm.net/en/system/bodies/id/82004983/name/Heguae+KX-G+b12-0
+"Heguae KX-G b12-0 A 2",Sanyarin,"2023-09-17 11:03:22",218,Planet,"Rocky Ice world",,1,0.2,"Not terraformable",https://www.edsm.net/en/system/bodies/id/82004983/name/Heguae+KX-G+b12-0
+"Heguae KX-G b12-0 A 3",Sanyarin,"2023-09-17 11:03:15",299,Planet,"Rocky Ice world",,1,0.19,"Not terraformable",https://www.edsm.net/en/system/bodies/id/82004983/name/Heguae+KX-G+b12-0
+"Heguae KX-G b12-0 A 4",Sanyarin,"2023-09-17 11:03:20",398,Planet,"Icy body",,1,0.19,"Not terraformable",https://www.edsm.net/en/system/bodies/id/82004983/name/Heguae+KX-G+b12-0
+"Heguae KX-G b12-0 A 5",Sanyarin,"2023-09-17 11:03:12",501,Planet,"Icy body",,1,0.18,"Not terraformable",https://www.edsm.net/en/system/bodies/id/82004983/name/Heguae+KX-G+b12-0
+"Heguae KX-G b12-0 A 6",Sanyarin,"2023-09-17 11:03:09",928,Planet,"Icy body",,1,0.19,"Not terraformable",https://www.edsm.net/en/system/bodies/id/82004983/name/Heguae+KX-G+b12-0
+"Heguae KX-G b12-0 A 7",Sanyarin,"2023-09-17 11:03:18",1156,Planet,"Icy body",,1,0.22,"Not terraformable",https://www.edsm.net/en/system/bodies/id/82004983/name/Heguae+KX-G+b12-0
+"Heguae KX-G b12-0 A 8",Sanyarin,"2023-09-17 11:03:26",1592,Planet,"Icy body",,1,0.17,"Not terraformable",https://www.edsm.net/en/system/bodies/id/82004983/name/Heguae+KX-G+b12-0
+"Heguae KX-G b12-0 B",Sanyarin,"2023-09-17 11:02:42",15945,Star,"M (Red dwarf) Star",,0,0,0,https://www.edsm.net/en/system/bodies/id/82004983/name/Heguae+KX-G+b12-0

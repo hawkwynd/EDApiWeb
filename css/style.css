@@ -1,0 +1,466 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+a.massmathCopy{
+  display: inline-block;
+  background-image: url('../img/icn-copy.png');
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 10px; 
+  width: 10px;
+  cursor: pointer;
+  /* color:#015f08; */
+  padding: 3px;
+}
+
+/* a.massmathCopy::after{
+  /* content: "\2191"; */
+  /* content: "\03D8"; */
+  /* margin-left: 6px; */
+/* } */
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #aed0eb;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.form_group {
+  margin: 0 0 30px 0;
+}
+
+.form_group label {
+  margin: 4px 0;
+}
+
+.form_group input {
+  margin: 10px 6px 0 0;
+  padding: 4px;
+}
+
+.form_group button {
+  background: #015f08;
+  color: white;
+  border-style: outset;
+  border-color: #1b2707;
+  height: 30px;
+  width: 100px;
+  font: bold 15px arial, sans-serif;
+  text-shadow: none;
+}
+
+
+#dlLink {
+  margin: 20px 5px
+}
+
+#copyRef{
+  cursor: pointer;
+  padding: 0 20px;
+
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 4px;
+  font-family: monospace;
+  vertical-align: top;
+}
+
+td#bodyName,
+td#rings,
+td#subType,
+#discoveredBy {
+  white-space: nowrap;
+}
+
+td#materials {
+  font-size: 13px
+}
+
+table th {
+  padding: 12px 4px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 18px;
+  margin: 20px 0 12px 0;
+  color: rgb(25, 74, 3);
+
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  margin-bottom: 40px;
+}
+
+.parent>div {
+  line-height: 15px;
+}
+
+.child1 {
+  width: auto;
+  font-family: monospace;
+  font-size: 12px;
+  margin-left: 10px;
+  border: 1px solid #6f9b74;
+  padding: 8px;
+  background-color: #e1ffe1;
+}
+
+.child1 div > span, .child2 div > span {
+  font-weight: 700;
+}
+
+.child1 div > span.warning{
+  font-weight: normal;
+  color: #ff00007c;
+}
+
+/* power state span */
+/* .child1 div > span.Exploited{
+  color: #312ef5;
+  font-weight: normal;
+}  */
+
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.Exploited::before{
+  
+    font-family: "Font Awesome 5 Free";
+    content: "\f505";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+  
+}
+
+.child2, .child3, .child4 {
+  width: auto;
+  font-family: monospace;
+  font-size: 12px;
+  margin-left: 10px;
+  border: 1px solid #6f9b74;
+  padding: 8px;
+  background-color: #ebeceb;
+}
+
+.child2 div{
+  margin-bottom: 4px;
+}
+
+.child2 div>span#carriers, 
+.child2 div>span#outposts, 
+.child2 div>span#starports,
+.child2 div>span#settlements,
+.child2 div>span#bases
+{
+  cursor: pointer;
+}
+
+.child3, .child4{
+  background-color: #fdfbd9;
+  display: none;
+  width:auto;
+  line-height: 14px;
+}
+
+
+
+#carrierHeading, #outpostsHeading, #starportsHeading, #settlementHeading{ margin-bottom: 10px; font-weight: 600;}
+
+#carrierHeading>span, #outpostsHeading>span, #starportsHeading>span, #settlementHeading>span, .sName>span{
+  float: right;
+  color:red;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+
+.outpost {
+  padding: 1px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.sName{ font-weight: 700;margin-bottom: 10px;}
+
+.outpost span, .starport span, .settlement span {
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.outpostKey{
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0px 10px 0 0;
+    font-weight: 600;
+}
+
+.outpostKey span{
+  margin-left: 4px;
+}
+
+.test{background-color: #ffebcd;}
+
+.landable>td {
+  background: rgb(230, 253, 220);
+}
+
+.galaxyImgContainer {
+  padding: 100% 0 0 0;
+  background: url(galaxyBackgroundV2.jpg);
+  background-size: cover;
+  position: relative;
+  /* width: 240px; */
+  /* height: 120px; */
+}
+
+span.btn {
+  position: absolute;
+  margin-top: -7px;
+  margin-left: -7px;
+  width: 9px;
+  height: 8px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.btn {
+  border-color: rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-warning {
+  background-image: linear-gradient(#faa123, #f89406 60%, #e48806);
+  background-repeat: no-repeat;
+  filter: none;
+  color: #fff;
+}
+
+#reserveLevel {
+  font-weight: 700;
+  color: #1b2707;
+  margin-bottom: 10px
+}
+
+#hotspots {
+  /* background-color: moccasin;*/
+  background-color: #e2d2ffcc;
+  padding: 2px;
+}
+
+#hotspots .signals-heading{
+  color: #173d20;
+  margin: 5px 0;
+  background-color: #e9f3c0;
+  padding: 2px 0;
+}
+
+#hotspots .hotspot{
+  margin: 4px 0 0 4px;
+}
+
+.hsHeading{
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 12px;
+}
+
+.common{
+  color:#e48806;
+}
+
+.low{
+  color: grey;
+
+}
+
+.Pristine {
+  color: #1b741b;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.Pristine::after {
+  margin-left: 5px;
+  content: "\2193"
+}
+
+.terraformable {
+  font-weight: 700;
+  margin-left: 5px;
+  color: #015f08;
+}
+
+.failContainer {
+  margin: 40px;
+  line-height: 23px;
+  background: #04aa6d6b;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+}
+.failContainer .warning {
+  color: red;
+  font-size: 18px;
+  background: #e7ff6e;
+  padding: 20px;
+}
+
+.failContainer div {
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.overviewContainer {
+  margin: 10px 20px;
+}
+
+.massContainer{
+  margin: 5px 0 5px 0;
+  font-size: 12px;
+  background-color: #f1f1f1;
+  padding: 5px;
+}
+
+
+.ringMass span, .iRadius span, .oRadius span {
+  float: right;
+}
+
+.massMath span {
+  font-weight: normal;
+}
+
+a{
+  text-decoration: none;
+  color:#015f08;
+}
+
+a#carriers,a#starports,a#settlements,a#bases{
+  font-weight: 700;
+  color: #000;
+}
+
+a>div{font-weight: normal;}
+
+
+/* Tooltip CSS only  */
+
+a.tooltips {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 700;
+  /* color:#fefffe; */
+  margin-left: 5px;
+}
+
+a.tooltips span {
+  position: absolute;
+  width: 120px;
+  color: #76ee09;
+  background: #000000;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: normal;
+  font-family: monospace;
+}
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 65%; 
+  margin-left: -8px; 
+  width: 0;
+  height: 0;
+  border-top: 8px solid #000000;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+a:hover.tooltips span {
+  visibility: visible;
+  opacity: 0.8;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -76px;
+  z-index: 999;
+
+}
+
+/* EDSM LINK */
+a.tooltips.edsmlink:after {
+  content: "\90";
+  color: #04aa6d;
+  font-size: 30px;
+  text-align: center;
+}
+
+span.strong { font-weight: 700;}
+
+.blueBackground{
+  background-color: rgb(173, 230, 199);
+  cursor: pointer;
+}
