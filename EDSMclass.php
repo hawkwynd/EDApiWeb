@@ -17,6 +17,7 @@ class EDSM{
         
         $this->region = null; 
         $this->conn = $mysqli;
+        $this->spanshAPIData = null;
 
         // configure for wanted materials
         $this->wantedMats       = ['Cadmium', 'Niobium','Yttrium','Tungsten','Polonium','Ruthenium','Tellurium','Technetium','Antimony','Nickel', 'Iron'];
@@ -425,7 +426,7 @@ class EDSM{
             // grab the API dump from Spansh
             $spanshAPIResult = $this->apiSpansh($data->id64);
 
-            if($spanshAPIResult){
+            if( $spanshAPIResult ){
                 $this->spanshAPIData = $spanshAPIResult;
             }
 
@@ -466,23 +467,37 @@ class EDSM{
     }
 
 
-    // Try to obtain the region name from Spansh
+    // Try to obtain the region name from Spansh api
     public function getRegionName( $systemName, $arr = array() )
     {
         $url        = sprintf("https://spansh.co.uk/api/search?q=%s" , urlencode( $systemName) );
         $contents   = file_get_contents($url);
         $data       = json_decode( $contents, false );
 
+        // $this->preWrap( $this->spanshAPIData );
+        
         // check if Spansh knows this system, because undiscovered systems are empty results.
         if(!$data->results) return (object) array("region" => "Undiscovered");
-
+        
         // iterate through results gather type->system arrays
         foreach( $data->results as $rec ){
             if( $rec->type == 'system'){
                 array_push($arr, array("id64" => $rec->record->id64, "name" => $rec->record->name, "region" => $rec->record->region ));
             }
         }
-        return (object) $arr[0];
+        /**
+         * If we didn't get a region from $data->results, 
+         * return our object undiscovered. 
+         * Else, return our object with region data. 
+         */
+
+        if( !$arr ) {
+            
+
+            return  (object) array("region" => "Undiscovered");
+        }else{
+            return (object) $arr[0];
+        }
     }
 
 
@@ -859,13 +874,17 @@ public function discoveries( $bodies, $hotspots, $pack=[] )
 
     // biolgicals per body from SpanshJSON, not the EDSM json
     public function getBiologicals( $body ) {
+        
+        // if we don't have data, just return empty.
+        if(!isset($this->spanshAPIData['system'])) return;
+        
         $spanshBodies = $this->spanshAPIData['system']['bodies'];
         $genusList = "";
-
-            foreach( $spanshBodies as $spanshBody){
-                if($spanshBody['bodyId'] == $body->bodyId){
-                    if(isset($spanshBody['signals']['genuses'])){
-                        
+        
+        foreach( $spanshBodies as $spanshBody){
+            if($spanshBody['bodyId'] == $body->bodyId){
+                if(isset($spanshBody['signals']['genuses'])){
+                    
                         foreach($spanshBody['signals']['genuses'] as $genus) {
                             $genusFiltered = substr($genus, 11, -12);
                             $genusList .= $genusFiltered . "<br/>";
@@ -876,12 +895,17 @@ public function discoveries( $bodies, $hotspots, $pack=[] )
                     }
                 }
             }
-    }
+        }
 
-    // Count of Geologicals from SPANSHJson, not EDSM JSON
-    public function getGeologicals( $body ){
-        $spanshBodies = $this->spanshAPIData['system']['bodies'];
-        foreach( $spanshBodies as $spanshBody){
+        // Count of Geologicals from SPANSHJson, not EDSM JSON
+        public function getGeologicals( $body ){
+            
+            // if we don't have data, just return empty.
+            if(!isset($this->spanshAPIData['system'])) return;
+            
+            $spanshBodies = $this->spanshAPIData['system']['bodies'];
+            
+            foreach( $spanshBodies as $spanshBody){
                 if( $spanshBody['bodyId'] == $body->bodyId ){
                     if(isset($spanshBody['signals']['signals']['$SAA_SignalType_Geological;'] )){
                         return sprintf('%d %s',  $spanshBody['signals']['signals']['$SAA_SignalType_Geological;'], ' signals') ;
