@@ -3,6 +3,10 @@
   background-color: #333;
   overflow: hidden;
   margin-bottom: 20px;
+  display: flex;
+
+  font-family: "Fira Sans","fontello","Tahoma-Capital","Roboto-Capital","Tahoma","Roboto","Arial","Microsoft YaHei",sans-serif;
+
 }
 
 /* Style the links inside the navigation bar */
@@ -13,6 +17,21 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+
+.itemRight{
+  color:#04AA6D;
+  padding: 14px 16px;
+  margin-left: auto
+}
+
+.lastItem{
+  
+  color:#04AA6D;
+  padding: 14px 12px;
+  /* font-size: 17px; */
+  /* padding: 14px 16px; */
+  /* margin-left: auto */
 }
 
 a.massmathCopy{
@@ -35,10 +54,10 @@ a.massmathCopy{
 /* } */
 
 /* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #aed0eb;
+/* .topnav a:hover {
+  background-color: #78bbf1;
   color: black;
-}
+} */
 
 /* Add a color to the active/current link */
 .topnav a.active {
@@ -46,9 +65,10 @@ a.massmathCopy{
   color: white;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+body, .form_group input {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: "Fira Sans","fontello","Tahoma-Capital","Roboto-Capital","Tahoma","Roboto","Arial","Microsoft YaHei",sans-serif;
+  font-size: 14px;
 }
 
 .form_group {
@@ -92,12 +112,24 @@ table {
   margin-bottom: 50px;
 }
 
-table th,
-table td {
+table th, table td {
   border: 1px solid #ddd;
   padding: 4px;
-  font-family: monospace;
   vertical-align: top;
+  white-space: nowrap;
+}
+
+table th{
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 12px 4px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+table td{
+  font-size: 14px;
+
 }
 
 td#bodyName,
@@ -108,15 +140,7 @@ td#subType,
 }
 
 td#materials {
-  font-size: 13px
-}
-
-table th {
-  padding: 12px 4px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
-  text-transform: capitalize;
+  /* font-size: 13px */
 }
 
 h3 {
@@ -135,13 +159,12 @@ h3 {
 }
 
 .parent>div {
-  line-height: 15px;
+  line-height: 20px;
+  font-size: 14px;
 }
 
 .child1 {
   width: auto;
-  font-family: monospace;
-  font-size: 12px;
   margin-left: 10px;
   border: 1px solid #6f9b74;
   padding: 8px;
@@ -152,7 +175,7 @@ h3 {
   font-weight: 700;
 }
 
-.child1 div > span.warning{
+.child1 > div > span.warning{
   font-weight: normal;
   color: #ff00007c;
 }
@@ -185,12 +208,15 @@ h3 {
 
 .child2, .child3, .child4 {
   width: auto;
-  font-family: monospace;
-  font-size: 12px;
   margin-left: 10px;
   border: 1px solid #6f9b74;
   padding: 8px;
   background-color: #ebeceb;
+}
+
+.child2>div, .child3>div, .child4>div{
+  /* font-size:smaller; */
+  line-height: 18px;
 }
 
 .child2 div{
@@ -210,7 +236,7 @@ h3 {
   background-color: #fdfbd9;
   display: none;
   width:auto;
-  line-height: 14px;
+  /* line-height: 14px; */
 }
 
 
@@ -257,7 +283,7 @@ h3 {
 .test{background-color: #ffebcd;}
 
 .landable>td {
-  background: rgb(230, 253, 220);
+  background: #e2f8e4;
 }
 
 .galaxyImgContainer {
@@ -372,6 +398,9 @@ span.btn {
 .overviewContainer {
   margin: 10px 20px;
 }
+.overviewContainer a.headLink{
+  padding-right: 10px
+}
 
 .massContainer{
   margin: 5px 0 5px 0;
@@ -409,11 +438,26 @@ a.tooltips {
   display: inline-block;
   cursor: pointer;
   font-weight: 700;
-  /* color:#fefffe; */
-  margin-left: 5px;
+  margin-left: 3px;
 }
 
 a.tooltips span {
+    position: absolute;
+    width: 200px;
+    color: #ffffff;
+    background: #000000;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    visibility: hidden;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: monospace;
+}
+
+
+/* a.tooltips span {
   position: absolute;
   width: 120px;
   color: #76ee09;
@@ -426,12 +470,13 @@ a.tooltips span {
   font-size: 12px;
   font-weight: normal;
   font-family: monospace;
-}
+} */
+
 a.tooltips span:after {
   content: '';
   position: absolute;
   top: 100%;
-  left: 65%; 
+  left: 50%; 
   margin-left: -8px; 
   width: 0;
   height: 0;
@@ -440,7 +485,7 @@ a.tooltips span:after {
   border-left: 8px solid transparent;
 }
 
-a:hover.tooltips span {
+/* a:hover.tooltips span {
   visibility: visible;
   opacity: 0.8;
   bottom: 30px;
@@ -448,19 +493,38 @@ a:hover.tooltips span {
   margin-left: -76px;
   z-index: 999;
 
+} */
+
+a:hover.tooltips span {
+    visibility: visible;
+    /* opacity: 11.8; */
+    bottom: 41px;
+    left: -79px;
+    margin-left: 0;
+    z-index: 999;
 }
 
 /* EDSM LINK */
 a.tooltips.edsmlink:after {
-  content: "\90";
+  /* content: "\90"; */
+  content: "EDSM";
   color: #04aa6d;
-  font-size: 30px;
-  text-align: center;
+  /* font-size: 30px; */
+  text-align: left;
 }
 
 span.strong { font-weight: 700;}
 
 .blueBackground{
-  background-color: rgb(173, 230, 199);
+  background-color: #526897;
   cursor: pointer;
 }
+
+small{
+  font-size: x-small;
+  line-height: 16px;
+
+}
+
+span.hot{ color:red }
+span.ok{ color:#015872}

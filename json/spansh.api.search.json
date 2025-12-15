@@ -1,0 +1,48 @@
+[
+    {
+        "controlling_minor_faction": "FleetCarrier",
+        "distance_to_arrival": 431.299234,
+        "has_large_pad": true,
+        "has_market": true,
+        "has_outfitting": true,
+        "has_shipyard": true,
+        "large_pads": 8,
+        "market_id": 3702002944,
+        "medium_pads": 4,
+        "name": "THL-32W",
+        "small_pads": 4,
+        "type": "Drake-Class Carrier",
+        "inaraLink": "https:\/\/inara.cz\/elite\/station\/?search=THL-32W",
+        "inaraApiUrl": "https:\/\/spansh.co.uk\/api\/search?q=3702002944"
+    },
+    {
+        "controlling_minor_faction": "FleetCarrier",
+        "distance_to_arrival": 0,
+        "has_large_pad": true,
+        "has_market": true,
+        "has_outfitting": true,
+        "has_shipyard": true,
+        "large_pads": 8,
+        "market_id": 3702709760,
+        "medium_pads": 4,
+        "name": "T4Y-99X",
+        "small_pads": 4,
+        "type": "Drake-Class Carrier",
+        "inaraLink": "https:\/\/inara.cz\/elite\/station\/?search=T4Y-99X",
+        "inaraApiUrl": "https:\/\/spansh.co.uk\/api\/search?q=3702709760"
+    },
+    {
+        "controlling_minor_faction": "FleetCarrier",
+        "distance_to_arrival": 0,
+        "has_large_pad": true,
+        "has_market": true,
+        "large_pads": 8,
+        "market_id": 3709361152,
+        "medium_pads": 4,
+        "name": "T8B-T8J",
+        "small_pads": 4,
+        "type": "Drake-Class Carrier",
+        "inaraLink": "https:\/\/inara.cz\/elite\/station\/?search=T8B-T8J",
+        "inaraApiUrl": "https:\/\/spansh.co.uk\/api\/search?q=3709361152"
+    }
+]

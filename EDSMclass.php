@@ -34,6 +34,9 @@ class EDSM{
         
         $this->fetchSpanshData();
 
+
+        // $this->preWrap( $this->carriers );
+
         // $this->signalCheck();
         // exit;
     }
@@ -285,7 +288,7 @@ class EDSM{
     public function geologicalCheck( $body ) 
     {
 
-        $this->preWrap( $body );
+        // $this->preWrap( $body );
         $output = null;
         $geologicals = property_exists( $this, 'landmarks') ? $this->geologicals : null;
         $class      = "class=\"landmark\"";
@@ -576,9 +579,14 @@ class EDSM{
                             $outposts[] = $row;
                         }
                         // collect carriers
-                        if( strpos($row->type, 'Carrier') > 0 ) {
-                            $carriers[] = $row; 
+                        if( strpos($row->type, 'Carrier') > 0  && property_exists( $row, 'controlling_minor_faction' ) ) {
+
+                                $row->inaraLink = sprintf('https://inara.cz/elite/station/?search=%s', urlencode($row->name) );
+                                $row->spanshAPIUrl = sprintf('https://spansh.co.uk/api/search?q=%s', $row->market_id);
+                                $carriers[] = $row; 
+
                         }
+
                         // Starpots
                         if( strpos($row->type, 'Starport') > 0 ) {
                             
@@ -634,9 +642,6 @@ class EDSM{
         
         $bodies = property_exists( $matchedResult->record, 'bodies') ? $matchedResult->record->bodies : []; 
         
-        // $this->preWrap($bodies);
-        // exit;
-
         foreach($bodies as $body ){
             
 
@@ -648,8 +653,6 @@ class EDSM{
                     // just matching biological landmarks
                     foreach( $body->landmarks as $landmark ){
                         
-                            // $this->preWrap( $landmark );
-
                         // biological signals
                         if( in_array(  $landmark->subtype, $this->species )){
                             $landmarks[] = ['body_name' => $body->name,  'landmark' => $landmark ];
@@ -670,8 +673,6 @@ class EDSM{
         $this->landmarks = $landmarks;
         $this->geologicals = $geologicals; 
         
-        // $this->preWrap( $this->geologicals );
-
         // System Info (future use)
         $this->allegiance                   = property_exists($matchedResult->record, 'allegiance') ? $matchedResult->record->allegiance : null;
         $this->controlling_minor_faction    = property_exists($matchedResult->record, 'controlling_minor_faction') ? $matchedResult->record->controlling_minor_faction : null;
@@ -826,44 +827,67 @@ public function discoveries( $bodies, $hotspots, $pack=[] )
 
             // check for MainStar 
             $isMainStar            = property_exists($body, 'isMainStar') ? ($body->isMainStar == 'true' ? ' (Main) ' : null) : null;
-            
+            // major axis rounded
             $semiMajorAxis          = property_exists($body, 'semi_major_axis') ? round($body->semi_major_axis, 2) : null;
+            // surfaceTemperature
+            $surfaceTemperature     = property_exists($body, 'surfaceTemperature') ? $body->surfaceTemperature : null; 
+            
+            // gravity rounded
             $gravity                = property_exists($body, 'gravity') ? round($body->gravity, 2) : 0;
-
-            // atmosphereComposition and solidComposition
+            // atmosphereComposition and solidComposition values
             $solidComposition       = property_exists($body, 'solidComposition') ? $body->solidComposition: null; 
             $atmosphereComposition  = property_exists($body, 'atmosphereComposition') ? $body->atmosphereComposition : null;
 
-
             // sometime we don't get discovery data
             $discovery              = property_exists($body, 'discovery') ? $body->discovery : null;
+            // initialize variables for later
             $discoveryDt            = null;
             $commander              = null;
 
             // format commander discovery info
             if($discovery){
+                // get the date of the system discovery
                 $discoveryDt        = property_exists($discovery, 'date') ? date_create( $body->discovery->date ) : null;
+                $now                = new DateTime();
+                // how many years ago was the discovery?
+                $diff               = $discoveryDt->diff($now);
+                // format string to display when discovery was and how long ago if it's more than a year ago
+                $when               = $diff->y >0 ? ' (' .$diff->y . 'yr' . ($diff->y > 1 ? 's' : '') . ' ago)': ' (recently)';
+                // add 986 years to co-incide with the game year
+                $discoveryDt->add(new DateInterval('P986Y'));
+                // format mm-yyyy
                 $discoveryDt        = date_format($discoveryDt, 'm-Y');
-                $commander          = property_exists($discovery, 'commander') ? $discovery->commander . " " . $discoveryDt : null;
+                // CMDR Scott Fleming 12-3011
+                $commander          = property_exists($discovery, 'commander') ?  sprintf('<div>%s</div><small>%s</small>', $discovery->commander , $discoveryDt . $when ) : null;
             }
-            // tater flags
+
             
-            
+            /**
+             // TODO: The object that gets appended to the system array of bodies. Should prob clean this up, sometime.
+             */
             $myObj = (object) [
                 "bodyName"       => $body->name,
-                "bodyType"       => $body->subType .  $isMainStar.  $this->terraformableCheck($body) . " ". $this->ageOfStar($body),
+                "bodyType"       => $body->subType . $isMainStar.  $this->terraformableCheck($body) . " ". $this->ageOfStar($body),
                 "isLandable"     => property_exists($body, 'isLandable') ? $body->isLandable : 0,
-                "radius"         => $body->type == "Star" ? $body->solarRadius : $body->radius, 
-                "gravity"        => property_exists($body, 'gravity') ? round($body->gravity, 2) . " G" : null,
-                "Atmos Comp"     => isset( $atmosphereComposition ) ? $this->maxHeliumLevel( $atmosphereComposition): null,
+                "radius"         => $body->type == "Star" ? $body->solarRadius : $body->radius,
+                "gravity"        => ( property_exists($body, 'gravity') && $body->isLandable == 1 ) ? round( $body->gravity, 2 ) : null,
+                "atmosphere"     => isset( $atmosphereComposition ) ? $this->maxHeliumLevel( $atmosphereComposition) : null,
                 "materials"      => property_exists($body, 'materials') ? $this->materialsCheck($body->materials): null,
-                "Rings/Hotspots" => property_exists( $body, 'rings') ? $this->ringCheck( $body ) : null,
-                "Exo Signals"    => $this->getBiologicals($body),
+                "Rings" => property_exists( $body, 'rings') ? $this->ringCheck( $body ) : null,
+                "Exobiology"    => $this->getBiologicals($body),
                 "Geological"     => $this->getGeologicals( $body ),
-                "Discovered By"  => $commander,
+                "Discovered"  => $commander,
                 "EDSM"           => $body->bodyId > 0 ? $this->details->url . '/details/idB/'. $body->id . '/nameB/' . $body->name . ' ' . $body->bodyId : $this->details->url,
             ];
+            
+            // append the surfaceTemperature to the subType element on landable bodies.
+            // 800K or higher is too hot, color it red and strong
 
+            $class = $surfaceTemperature > 800 ? "hot": "ok";
+            if($myObj->isLandable == 1) $myObj->bodyType .= sprintf('</br/><small>Surface Temp: <span class="%s">%sK</span></small>', $class, $surfaceTemperature );
+            
+            
+            // add to the pack array
             $pack[] = $myObj;
         }
         
@@ -898,7 +922,10 @@ public function discoveries( $bodies, $hotspots, $pack=[] )
         }
 
         // Count of Geologicals from SPANSHJson, not EDSM JSON
-        public function getGeologicals( $body ){
+        // Over time the genuses will populate the json results, so let's 
+        // work them into the display when they're available. 
+
+        public function getGeologicals( $body, $strGenus = "" ){
             
             // if we don't have data, just return empty.
             if(!isset($this->spanshAPIData['system'])) return;
@@ -906,9 +933,27 @@ public function discoveries( $bodies, $hotspots, $pack=[] )
             $spanshBodies = $this->spanshAPIData['system']['bodies'];
             
             foreach( $spanshBodies as $spanshBody){
+                // make sure we're on the right body
                 if( $spanshBody['bodyId'] == $body->bodyId ){
-                    if(isset($spanshBody['signals']['signals']['$SAA_SignalType_Geological;'] )){
-                        return sprintf('%d %s',  $spanshBody['signals']['signals']['$SAA_SignalType_Geological;'], ' signals') ;
+                    
+                    if( isset($spanshBody['signals']['genuses']) )
+                        {
+                            foreach($spanshBody['signals']['genuses']  as $genus)
+                                {
+                                    $strGenus .= sprintf('%s<br/>', $genus);
+                                    // $this->preWrap( $genus );
+                                }
+                            }
+                        if(isset($spanshBody['signals']['signals']['$SAA_SignalType_Geological;'] )){
+                            /**
+                             * 
+                               2 geo signals
+                               Volcanism:Major Metallic Magma
+                               2025-12-14 03:00:22+00
+                             *                               
+                             */
+
+                            return sprintf('%d %s <br/><strong>Volcanism</strong>:%s<br/><small>%s</small>',  $spanshBody['signals']['signals']['$SAA_SignalType_Geological;'], ' geo signals', $spanshBody['volcanismType'], $spanshBody['updateTime']) ;
                     }
                 }
             }
@@ -919,6 +964,8 @@ public function discoveries( $bodies, $hotspots, $pack=[] )
 
     // Helium maxlevel check
     public function maxHeliumLevel( $obj, $strOut = '' ){
+
+
         foreach( $obj as $key => $value ){
             
             if($key == "Helium" && $value > $this->materialLevels['maxlevels']['helium'] ){
@@ -983,8 +1030,10 @@ public function discoveries( $bodies, $hotspots, $pack=[] )
     public function planetCount() {
         $c = 0;
         
+        // $this->prewrap( $this->getDetails()->bodies);
+
         foreach( $this->getDetails()->bodies as $row ){
-            if($row->type == 'Planet') $c++;
+            if($row->type == 'Planet' || $row->type === 'Star') $c++;
         }
 
         return $c;
@@ -1002,7 +1051,7 @@ public function discoveries( $bodies, $hotspots, $pack=[] )
               array_push( $wantedAvgLevels, strtolower($mat) .":". $this->materialLevels['avgLevels'][strtolower($mat)] );
             }
         
-        $html = sprintf("<div class=\"overviewContainer\"><h3>%s <i class=\"far fa-copy\" id=\"copyRef\"></i><a class='tooltips' href='%s' target='_blank'>*<span>Spansh JSON data</span></a><span>%s</span></h3>
+        $html = sprintf("<div class=\"overviewContainer\"><h3>%s <a class=\"tooltips\"><i class=\"far fa-copy\" id=\"copyRef\"></i><span>page url clipboard</span></a><a class='tooltips headLink' href='%s' target='_blank'>SJ<span>Spansh JSON data</span></a><span>%s</span></h3>
         <div class=\"parent\">
             <div class=\"child1\">
                 <div><span>Region</span>: %s</div>
@@ -1032,21 +1081,21 @@ public function discoveries( $bodies, $hotspots, $pack=[] )
         </div><!--overview-->", 
         $this->scanValues->name,
         // urlencode($this->scanValues->name),
-        isset($this->jsonSpanshDumpUrl) ? $this->jsonSpanshDumpUrl : '', '<a target="_blank" href="' . $this->jsonEDSMUrl. '">$</a>',
+        isset($this->jsonSpanshDumpUrl) ? $this->jsonSpanshDumpUrl : '', '<a class="tooltips headLink" target="_blank" href="' . $this->jsonEDSMUrl. '">EDJ<span>EDSM Json data</span></a>',
         
         // if region is null, run getRegionName else use region from $this
         
         $this->region == null ? $this->getRegionName( $this->systemName )->region : $this->region,
 
-        property_exists($this, 'updated_at') ? '<div><span>Updated</span>: ' . $this->updated_at . '</div>' : '',
+        property_exists($this, 'updated_at') ? '<div><span>Last update</span>: ' . $this->updated_at . '</div>' : '',
         (property_exists($this, 'allegiance') && $this->allegiance )  ? '<div><span>Allegiance</span>:' . $this->allegiance . '</div>' : '' ,
         (property_exists($this, 'controlling_power') && $this->controlling_power )  ? '<div><span>Controlling Power</span>: ' . $this->controlling_power . '</div>' : '',
         (property_exists($this, 'power_state') && $this->power_state )  ? '<div><span>Power State</span>: ' . $this->power_state . '</span></div>' : '',
         (property_exists($this, 'controlling_minor_faction') && $this->controlling_minor_faction) ? '<div><span>Controlling Minor Faction</span>: ' . $this->controlling_minor_faction . '</div>' :'',
         (property_exists($this, 'controlling_minor_faction_state') && $this->controlling_minor_faction_state) ? '<div><span>Controlling Minor Faction State</span>: ' . $this->controlling_minor_faction_state . '</div>': '',
         (property_exists($this, 'minor_faction_presences') && $this->minor_faction_presences) ? '<div><span>Minor Factions Present</span>: ' . $this->minor_faction_presences .'</div>': '',
-        (property_exists($this, 'government' ) && $this->government) ? '<div><span>Government</span>:' . $this->government . '</div>' : '' ,
-        (property_exists($this, 'security') && $this->security) ? '<div><span>Security</span>:' . $this->security . '</div>' : '' ,
+        (property_exists($this, 'government' ) && $this->government != 'None') ? '<div><span>Government</span>:' . $this->government . '</div>' : '' ,
+        (property_exists($this, 'security') && $this->security ) ? '<div><span>Security</span>:' . $this->security . '</div>' : '' ,
         $this->planetCount(),
         $this->fetchLandables(),
         count($this->scanValues->valuableBodies), 
@@ -1055,7 +1104,7 @@ public function discoveries( $bodies, $hotspots, $pack=[] )
         $this->fetchRingedBodies() > 0 ? '<div><span>Ringed Bodies</span>: ' . $this->fetchRingedBodies() . '</div>' : '',
         $this->ringsCount() > 0 ? '<div><span>Total Rings</span>:' . $this->ringsCount() . '</div>' : '',
         $this->landableTaters > 0 ? '<div><span>Landable Space Taters</span>: '. $this->landableTaters . '</div>' : '',
-        (property_exists($this, 'carriers') && count($this->carriers) > 0 ) ? '<div><a class="tooltips" id="carriers">Carriers<span>View list</span></a>:' . count($this->carriers) . "</div>" : '',
+        (property_exists($this, 'carriers') && count($this->carriers) > 0 ) ? '<div><a class="tooltips" id="carriers">Carriers<span>View list</span></a></div>' : '',
         (property_exists($this, 'outposts') && count($this->outposts) > 0 )? '<div><a class="tooltips" id="outposts">Outposts<span>View list</span></a>:' . count($this->outposts) . "</div>" : '',
         (property_exists($this, 'starports') && count($this->starports) > 0) ? '<div><a class="tooltips" id="starports">Starports<span>View list</span></a>:' . count($this->starports) . "</div>" : '',
         (property_exists($this, 'bases') && count($this->bases) > 0) ? "<div><a class=\"tooltips\" id=\"bases\">Bases<span>View list</span></a>: " . count( $this->bases ) . "</div>" : '',
@@ -1094,6 +1143,8 @@ function renderMenu()
                 <a href="https://www.spansh.co.uk/fleet-carrier" target="_blank">Spansh</a>
                 <a href="https://docs.google.com/spreadsheets/d/1hY52cdHU4CDKwaHaOWrEl23ZRW6zl0p8t1FCzGs41oo/edit?gid=0#gid=0" target="_blank">Minerals</a>
                 <a href="https://edtools.cc/hotspot" target="_blank">Hotspots</a>
+                <div class="itemRight"></div>
+                <div class="lastItem"></div>
                 </div>';
 
     }

@@ -95,8 +95,10 @@ if( !empty($result) ) {
 
     // headers
     $headers = (array) $result[0];
-    unset($headers['isLandable']);
 
+    // remove elements we don't need displayed in the header
+    unset($headers['isLandable'], $headers['surfaceTemperature']);
+    
     echo "<table><tr>";
 
     foreach( array_keys($headers) as $col ){
@@ -110,12 +112,16 @@ if( !empty($result) ) {
         
         // landable bodies are green backgrounded
         $c = $row->isLandable == 1 ? "class=\"landable\"" : ''; 
+        
+        $isLandable = $row->isLandable > 0 ? true : false;
+
         unset($row->isLandable);
         printf("<tr %s>", $c );
         
         
         foreach($row as $key => $col ){
-            
+            // init surfaceTemperature
+            $surfaceTemperature = null; 
             // data holder
             $data       = $col;
             // class for use with the star element in bodyType
@@ -131,6 +137,13 @@ if( !empty($result) ) {
             if($key == 'EDSM'){
                 $col = "<a href='$col' target='_blank' class='tooltips edsmlink'><span>EDSM Info</span></a>";
             }
+            
+            // // capture surface temperature formatted: 1000K
+            // if($key == 'surfaceTemperature'){
+            //     $surfaceTemperature = $col;
+            //     continue;
+
+            // }
 
             // ===========================================
             // If our radius is less than 300 km, mark it 
@@ -141,12 +154,17 @@ if( !empty($result) ) {
                 
                 $rad = intval(str_replace(',','', $col));
 
-
                 if(  $rad < 300 && $c == "landable" ) {
                     $col = sprintf("%s km <strong>(tater)</strong>", $rad );
                 } else{
                     $col = sprintf("%s km", number_format($rad) );
                 }
+            
+            }
+
+            // Landable gravity only
+            if($key == 'gravity' && $isLandable ){
+                $col = sprintf('<span class="%s">%sg</span>', $col > 1 ? "hot": "ok", $col );
             }
 
             // materials formatting and comparison 
@@ -181,6 +199,7 @@ if( !empty($result) ) {
 
             }
 
+            
             // print the td element 
             echo "<td id='". $key."' class='".$class."'>" . $col . "</td>";
        
